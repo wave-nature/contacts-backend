@@ -26,7 +26,6 @@ exports.sendTokenAsResponse = (res, user, statusCode) => {
     httpOnly: true,
   };
 
-  if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
   res.cookie("token", token, cookieOptions);
 
   user.password = undefined;
