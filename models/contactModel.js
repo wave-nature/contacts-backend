@@ -18,6 +18,10 @@ const contactSchema = new mongoose.Schema(
       type: String,
       default: "personal",
     },
+    user: {
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+    },
   },
   {
     timestamps: true,
